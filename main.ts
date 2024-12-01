@@ -999,12 +999,34 @@ const input = `28186   35627
 62947   25771
 55820   53096`;
 
-if (import.meta.main) {
+export const dayOneStepOne = () => {
   // left and right should be infependently sorted
   // distance between each sorted row
   const l = input.split("\n");
   const left = [];
-  const rightMap = {};
+  const right = [];
+
+  for (const row of l) {
+    const [o, t] = row.split("   ");
+    left.push(+o);
+    right.push(+t);
+  }
+  left.sort((a, b) => a - b);
+  right.sort((a, b) => a - b);
+
+  let sum = 0;
+  for (let i = 0; i < left.length; i++) {
+    sum += Math.abs(left[i] - right[i]);
+  }
+  return sum;
+};
+
+export const dayOneStepTwo = () => {
+  // left and right should be infependently sorted
+  // distance between each sorted row
+  const l = input.split("\n");
+  const left = [];
+  const rightMap: Record<string, number> = {};
 
   // (item from left list) * (number of times it appears in right)
 
@@ -1023,5 +1045,7 @@ if (import.meta.main) {
   for (let i = 0; i < left.length; i++) {
     sum += left[i] * (rightMap[left[i].toString()] ?? 0);
   }
-  console.log(sum);
-}
+  return sum;
+};
+
+// console.log(dayOneStepOne());
