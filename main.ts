@@ -1,6 +1,7 @@
 const real = Deno.readTextFileSync("./input.txt").trim();
 
 const example = "2333133121414131402";
+const example2 = "233313312141413140212"; // todo this is to test with 10 as id
 
 // even indexes are sizes of fileblock
 // odd indices don't count as ids and are instead markers of `...` between sizes
