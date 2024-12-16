@@ -1,7 +1,8 @@
 {
   "version": "4",
   "specifiers": {
-    "npm:@types/node@*": "22.5.4"
+    "npm:@types/node@*": "22.5.4",
+    "npm:type-testing@*": "0.2.0"
   },
   "npm": {
     "@types/node@22.5.4": {
@@ -9,6 +10,9 @@
       "dependencies": [
         "undici-types"
       ]
+    },
+    "type-testing@0.2.0": {
+      "integrity": "sha512-HAf4o9LjUAh9xEIXZTNm+ak2tjTgK64QhTlT/D8UNedII2/eagdEbtbaVK6920K7+QBrwfvxpjPGlfWVKZ+MZQ=="
     },
     "undici-types@6.19.8": {
       "integrity": "sha512-ve2KP6f/JnbPBFyobGHuerC9g1FYGn/F8n1LWTwNxCEzd6IfqTwUQcNXgEtmmQ6DlRrC1hrSrBnCZPokRrDHjw=="
